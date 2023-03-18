@@ -144,7 +144,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 #current_weather_temperature {
