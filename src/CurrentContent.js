@@ -1,42 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
+import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+import "./CurrentContent.css";
 
 export default function CurrentContent(props) {
-  let [temperature, setTemperature] = useState(props.temperature);
-
-  function updateTemperature(event) {
-    event.preventDefault();
-    setTemperature(props.temperature + 5);
-  }
   return (
     <div className="CurrentContent">
-      <div className="row justify-content:start">
-        <div className="col col-sm-6 ms-0" id="current_date">
-          Saturday. March, 4
-        </div>
-        <div className="col col-sm-6 currentIcon">
-          <img
-            src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-            id="current_weather_image"
-            alt="Current Weather Icon"
-          />
-          <span
-            id="current_weather_temperature"
-            onMouseOver={updateTemperature}
-          >
-            {temperature}
-            °C | °F
-          </span>
-        </div>
-      </div>
+      <ul>
+        <div className="row">
+          <div className="col-6">
+            <li>
+              <FormattedDate date={props.data.date} />
+            </li>
+          </div>
 
-      <div className="col col-sm-6" id="current_time">
-        21:12
-      </div>
-      <div
-        className="col col-sm-6 description"
-        id="current_weather_description"
-      >
-        Cloudy
+          <div className="col-6">
+            <li className="text-capitalize">{props.data.description}</li>
+          </div>
+        </div>
+      </ul>
+      <div className="row mt-3">
+        <div className="col-6">
+          <div className="clearfix">
+            <div className="float-left">
+              <WeatherIcon code={props.data.icon} />
+            </div>
+            <div className="float-left">
+              <WeatherTemperature celsius={props.data.temperature} />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-6">
+          <ul>
+            <li>Humidity: {Math.round(props.data.humidity)}%</li>
+            <li>Wind: {props.data.wind}k/h</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
