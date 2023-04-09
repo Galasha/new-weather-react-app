@@ -23,6 +23,8 @@ export default function Search(props) {
       country: response.data.sys.country
     });
   }
+
+  console.log(weatherData);
   function search() {
     let units = "Metric";
     let apiKey = "3fa4eb6152e0b339ca92b5b3898a85ef";
@@ -54,11 +56,7 @@ export default function Search(props) {
             />
           </div>
           <div className="col-3">
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-primary w-100"
-            />
+            <input type="submit" value="Search" className="btn btn-primary " />
           </div>
         </div>
       </form>

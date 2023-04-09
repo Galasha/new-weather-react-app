@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import "./CurrentContent.css";
+import WeatherForecast from "./WeatherForecast";
 
 export default function CurrentContent(props) {
   return (
@@ -24,7 +25,7 @@ export default function CurrentContent(props) {
         <div className="col-6">
           <div className="clearfix">
             <div className="float-left">
-              <WeatherIcon code={props.data.icon} />
+              <WeatherIcon code={props.data.icon} size={58} />
             </div>
             <div className="float-left">
               <WeatherTemperature celsius={props.data.temperature} />
@@ -39,6 +40,7 @@ export default function CurrentContent(props) {
           </ul>
         </div>
       </div>
+      <WeatherForecast coordinates={props.data.coordinates} />
     </div>
   );
 }

@@ -1,74 +1,88 @@
 .CurrentContent {
-    padding: 16px;
-    border-radius: 4px;
-    border: 1px solid #dadde1;
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: #dadde1;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #dadde1;
+  max-width: 95%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #dadde1;
+}
+
+.CurrentContent h1 {
+  color: #878787;
+  font-size: 2rem;
+  margin: 20px 0 0 0;
+  font-weight: 100;
+  line-height: 29px;
+}
+
+.CurrentContent ul {
+  margin: 0;
+  padding: 0;
+}
+
+.CurrentContent .row {
+  padding-left: 10px;
+}
+.CurrentContent li {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 22px;
+  list-style: none;
+  padding-top: 5px;
+}
+
+.CurrentContent .clearfix {
+  display: flex;
+}
+.CurrentContent .tabs {
+  position: relative;
+}
+
+.CurrentContent .temperature {
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  font-size: 3rem;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+.CurrentContent canvas {
+  margin-top: 5px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.CurrentContent .unit {
+  font-size: 1.2rem;
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+  position: relative;
+  top: -32px;
+  margin-left: 0;
+  line-height: 1;
+}
+.CurrentContent span {
+  padding: 2px;
+}
+
+@media (min-width: 746px) {
+  .CurrentContent {
+    max-width: 600px;
   }
-  
-  .CurrentContent h1 {
-    color: #878787;
-    font-size: 24pf;
-    margin: 20px 0 0 0;
-    font-weight: 100;
-    line-height: 29px;
+}
+
+@media (max-width: 740px) {
+  .CurrentContent {
+    margin-left: 0;
+    width: 270px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
-  
-  .CurrentContent ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .CurrentContent .row {
-    padding-left: 30px;
+  .CurrentContent .temperature {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
   .CurrentContent li {
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 22px;
-    list-style: none;
-    padding-top: 5px;
+    font-size: 12px;
   }
-  
-  .CurrentContent .clearfix {
-    display: flex;
-  }
-  .CurrentContent .tabs {
-    position: relative;
-  }
-  
-  .CurrentContent .temperature {
-    font-weight: bold;
-    color: rgb(33, 33, 33);
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 400;
-  }
-  
-  .CurrentContent canvas {
-    margin-top: 5px;
-    margin-right: 10px;
-    display: inline-block;
-  }
-  .CurrentContent .unit {
-    font-size: 16px;
-    color: rgb(33, 33, 33);
-    font-weight: 400;
-    position: relative;
-    top: -32px;
-    margin-left: 0;
-    line-height: 1;
-  }
-  
-  .CurrentContent span {
-    padding: 2px;
-  }
-  
-  @media (min-width: 746px) {
-    .CurrentContent {
-      max-width: 600px;
-    }
-  }
-  
+}

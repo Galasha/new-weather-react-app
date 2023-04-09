@@ -1,0 +1,13 @@
+.WeatherForecast {
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px 5px;
+    padding-left: 0px;
+  }
+  
+  .WeatherForecast-temperature-min {
+    opacity: 0.6;
+    margin-left: 5px;
+  }
+  

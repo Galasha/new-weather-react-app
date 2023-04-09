@@ -1,18 +1,32 @@
 .Search .search_form {
-    margin-top: 50px;
+  margin-top: 50px;
+  width: 100%;
+  margin: 0px 50px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+}
+
+.Search .form-control {
+  display: block;
+  text-align: left;
+}
+
+@media (min-width: 746px) {
+  .Search .search_form {
+    width: 600px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .Search .form-control {
+    font-size: 0.7rem;
+  }
+  .Search .search_form {
     width: 80%;
-    margin: 0px 50px;
-    margin: 0 auto;
   }
-  
-  .Search .search_city {
-    display: block;
-    text-align: left;
+  .Search .btn {
+    font-size: 0.7rem;
+    width: 60%;
   }
-  
-  @media (min-width: 750px) {
-    .Search .search_form {
-      width: 600px;
-    }
-  }
-  
+}

@@ -17,6 +17,7 @@
 .App .container {
   position: relative;
   font-family: Poppins;
+  font-size: 10px;
   top: 30px;
   max-width: 80%;
   color: #161853;
@@ -35,6 +36,18 @@ footer {
   font-style: italic;
   color: #161853;
   opacity: 0.8;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: bold;
+}
+
+@media (min-width: 746px) {
+  .App .container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 740px) {
+  footer {
+    font-size: 0.6rem;
+  }
 }
